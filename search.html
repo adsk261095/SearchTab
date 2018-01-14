@@ -1,0 +1,790 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SearchBar</title>
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  	<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+	<script src="js/react.min.js"></script>
+    <script src="js/react-dom.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+</head>
+<body>
+	
+
+	<script>
+		var id=0,present=0;
+
+		function handle(e)
+		{
+			//console.log(e.keycode);
+			console.log(document.getElementById('search').value);
+			var json=[
+   {
+      "id":736,
+      "org_id":736,
+      "name":"Podio",
+      "logo":3917,
+      "image":{
+         "perma_link":null,
+         "hosted_by":"podio",
+         "hosted_by_humanized_name":"Podio",
+         "thumbnail_link":"https://d3szoh0f46td6t.cloudfront.net/public/3917",
+         "link":"https://d3szoh0f46td6t.cloudfront.net/public/3917",
+         "file_id":3917
+      },
+      "spaces":[
+         {
+            "id":52456,
+            "space_id":52456,
+            "name":"Acceleration",
+            "url":"https://hoist.podio.com/acceleration/",
+            "url_label":"acceleration",
+            "org_id":736,
+            "contact_count":null,
+            "member_count":null,
+            "app_count":null,
+            "role":"regular",
+            "rights":[
+               "view_members",
+               "add_task",
+               "add_widget",
+               "subscribe",
+               "add_file",
+               "add_user_light",
+               "add_status",
+               "add_user",
+               "add_contact",
+               "view",
+               "add_app"
+            ],
+            "post_on_new_app":null,
+            "post_on_new_member":null,
+            "subscribed":null,
+            "privacy":null,
+            "auto_join":null,
+            "type":"regular",
+            "premium":true,
+            "last_activity_on":null,
+            "created_on":null,
+            "is_overdue":null,
+            "push":{
+               "timestamp":1366359320,
+               "expires_in":20650,
+               "channel":"/space/52456",
+               "signature":"5b04f5c9e1c5984bb32e2986b863c75601b62296"
+            },
+            "rank":33
+         },
+         {
+            "id":11955,
+            "space_id":11955,
+            "name":"Agile",
+            "url":"https://hoist.podio.com/agile/",
+            "url_label":"agile",
+            "org_id":736,
+            "contact_count":null,
+            "member_count":null,
+            "app_count":null,
+            "role":"admin",
+            "rights":[
+               "view_members",
+               "add_task",
+               "add_widget",
+               "subscribe",
+               "delete",
+               "update",
+               "add_file",
+               "add_hook",
+               "add_user_light",
+               "add_status",
+               "add_user",
+               "share",
+               "add_contact",
+               "view",
+               "add_app"
+            ],
+            "post_on_new_app":null,
+            "post_on_new_member":null,
+            "subscribed":null,
+            "privacy":null,
+            "auto_join":null,
+            "type":"regular",
+            "premium":true,
+            "last_activity_on":null,
+            "created_on":null,
+            "is_overdue":null,
+            "push":{
+               "timestamp":1366358596,
+               "expires_in":19926,
+               "channel":"/space/11955",
+               "signature":"9d36d2c3f2df587cd6127f3700b8030d866237c8"
+            },
+            "rank":41
+         },
+         {
+            "id":2168,
+            "space_id":2168,
+            "name":"API",
+            "url":"https://hoist.podio.com/api/",
+            "url_label":"api",
+            "org_id":736,
+            "contact_count":null,
+            "member_count":null,
+            "app_count":null,
+            "role":"admin",
+            "rights":[
+               "view_members",
+               "add_task",
+               "add_widget",
+               "subscribe",
+               "delete",
+               "update",
+               "add_file",
+               "add_hook",
+               "add_user_light",
+               "add_status",
+               "add_user",
+               "share",
+               "add_contact",
+               "view",
+               "add_app"
+            ],
+            "post_on_new_app":null,
+            "post_on_new_member":null,
+            "subscribed":null,
+            "privacy":null,
+            "auto_join":null,
+            "type":"regular",
+            "premium":true,
+            "last_activity_on":null,
+            "created_on":null,
+            "is_overdue":null,
+            "push":{
+               "timestamp":1366359217,
+               "expires_in":20547,
+               "channel":"/space/2168",
+               "signature":"3dda35b0ac3b537cc80441bc38008c3155545889"
+            },
+            "rank":52
+         },
+         {
+            "id":3179,
+            "space_id":3179,
+            "name":"Design",
+            "url":"https://hoist.podio.com/design/",
+            "url_label":"design",
+            "org_id":736,
+            "contact_count":null,
+            "member_count":null,
+            "app_count":null,
+            "role":"regular",
+            "rights":[
+               "view_members",
+               "add_task",
+               "add_widget",
+               "subscribe",
+               "add_file",
+               "add_user_light",
+               "add_status",
+               "add_user",
+               "add_contact",
+               "view",
+               "add_app"
+            ],
+            "post_on_new_app":null,
+            "post_on_new_member":null,
+            "subscribed":null,
+            "privacy":null,
+            "auto_join":null,
+            "type":"regular",
+            "premium":true,
+            "last_activity_on":null,
+            "created_on":null,
+            "is_overdue":null,
+            "push":{
+               "timestamp":1366359194,
+               "expires_in":20524,
+               "channel":"/space/3179",
+               "signature":"1841b644172e1078e7e9f81fcacd8ee28343f9fa"
+            },
+            "rank":6
+         },
+         {
+            "id":207,
+            "space_id":207,
+            "name":"Development",
+            "url":"https://hoist.podio.com/development/",
+            "url_label":"development",
+            "org_id":736,
+            "contact_count":null,
+            "member_count":null,
+            "app_count":null,
+            "role":"admin",
+            "rights":[
+               "view_members",
+               "add_task",
+               "add_widget",
+               "subscribe",
+               "delete",
+               "update",
+               "add_file",
+               "add_hook",
+               "add_user_light",
+               "add_status",
+               "add_user",
+               "share",
+               "add_contact",
+               "view",
+               "add_app"
+            ],
+            "post_on_new_app":null,
+            "post_on_new_member":null,
+            "subscribed":null,
+            "privacy":null,
+            "auto_join":null,
+            "type":"regular",
+            "premium":true,
+            "last_activity_on":null,
+            "created_on":null,
+            "is_overdue":null,
+            "push":{
+               "timestamp":1366359164,
+               "expires_in":20494,
+               "channel":"/space/207",
+               "signature":"d02aff4711ed2f3f54a10218f2a9c303cd7d59c8"
+            },
+            "rank":1
+         },
+         {
+            "id":70,
+            "space_id":70,
+            "name":"Intranet",
+            "url":"https://hoist.podio.com/hoistaps/",
+            "url_label":"hoistaps",
+            "org_id":736,
+            "contact_count":null,
+            "member_count":null,
+            "app_count":null,
+            "role":"regular",
+            "rights":[
+               "view_members",
+               "add_task",
+               "add_widget",
+               "subscribe",
+               "add_file",
+               "add_user_light",
+               "add_status",
+               "add_user",
+               "add_contact",
+               "view",
+               "add_app"
+            ],
+            "post_on_new_app":null,
+            "post_on_new_member":null,
+            "subscribed":null,
+            "privacy":null,
+            "auto_join":null,
+            "type":"regular",
+            "premium":true,
+            "last_activity_on":null,
+            "created_on":null,
+            "is_overdue":null,
+            "push":{
+               "timestamp":1366359194,
+               "expires_in":20524,
+               "channel":"/space/70",
+               "signature":"c17383959230989c1145b77c4a8b706ca679eb24"
+            },
+            "rank":11
+         }
+      ],
+      "url":"https://hoist.podio.com/",
+      "url_label":"hoist",
+      "premium":true,
+      "role":"regular",
+      "status":"active",
+      "sales_agent_id":7156,
+      "created_on":null,
+      "user_limit":100,
+      "member_count":null,
+      "contact_count":null,
+      "billing_interval":null,
+      "rights":[
+         "add_conversation",
+         "update",
+         "add_contract",
+         "view_admins",
+         "statistics",
+         "add_space",
+         "view"
+      ],
+      "verified_domain":null,
+      "domains":[
+         "hoisthq.com",
+         "podio.com"
+      ],
+      "rank":1,
+      "contract_status":"full",
+      "type":"sponsored",
+      "segment":null,
+      "segment_size":null,
+      "grants_count":39,
+      "allow_add_space":null,
+      "child_orgs":[
+
+      ],
+      "active?":true,
+      "admin?":false,
+      "upgradable?":true,
+      "not_upgraded?":false,
+      "partially_upgraded?":false,
+      "employee?":true,
+      "premium?":true,
+      "first_domain":"hoisthq.com"
+   },
+   {
+      "id":44315,
+      "org_id":44315,
+      "name":"CopenhagenJS",
+      "logo":20356965,
+      "image":{
+         "perma_link":null,
+         "hosted_by":"podio",
+         "hosted_by_humanized_name":"Podio",
+         "thumbnail_link":"https://d3szoh0f46td6t.cloudfront.net/public/20356965",
+         "link":"https://d3szoh0f46td6t.cloudfront.net/public/20356965",
+         "file_id":20356965
+      },
+      "spaces":[
+         {
+            "id":191599,
+            "space_id":191599,
+            "name":"ColdFront Conference",
+            "url":"https://copenhagenjs.podio.com/theconference/",
+            "url_label":"theconference",
+            "org_id":44315,
+            "contact_count":null,
+            "member_count":null,
+            "app_count":null,
+            "role":"admin",
+            "rights":[
+               "view_members",
+               "add_task",
+               "add_widget",
+               "subscribe",
+               "delete",
+               "update",
+               "add_file",
+               "add_hook",
+               "add_user_light",
+               "add_status",
+               "add_user",
+               "share",
+               "add_contact",
+               "view",
+               "add_app"
+            ],
+            "post_on_new_app":null,
+            "post_on_new_member":null,
+            "subscribed":null,
+            "privacy":null,
+            "auto_join":null,
+            "type":"regular",
+            "premium":true,
+            "last_activity_on":null,
+            "created_on":null,
+            "is_overdue":null,
+            "push":{
+               "timestamp":1366358596,
+               "expires_in":19926,
+               "channel":"/space/191599",
+               "signature":"9acf84b5ff9684c7f93ff7a4415a05fcf4e8262e"
+            },
+            "rank":1
+         },
+         {
+            "id":86822,
+            "space_id":86822,
+            "name":"CopenhagenJS",
+            "url":"https://copenhagenjs.podio.com/copenhagenjs/",
+            "url_label":"copenhagenjs",
+            "org_id":44315,
+            "contact_count":null,
+            "member_count":null,
+            "app_count":null,
+            "role":"admin",
+            "rights":[
+               "view_members",
+               "add_task",
+               "add_widget",
+               "subscribe",
+               "delete",
+               "update",
+               "add_file",
+               "add_hook",
+               "add_user_light",
+               "add_status",
+               "add_user",
+               "share",
+               "add_contact",
+               "view",
+               "add_app"
+            ],
+            "post_on_new_app":null,
+            "post_on_new_member":null,
+            "subscribed":null,
+            "privacy":null,
+            "auto_join":null,
+            "type":"regular",
+            "premium":true,
+            "last_activity_on":null,
+            "created_on":null,
+            "is_overdue":null,
+            "push":{
+               "timestamp":1366358596,
+               "expires_in":19926,
+               "channel":"/space/86822",
+               "signature":"28d541b1fb25c26f8ed790d5f324f69ac993ade6"
+            },
+            "rank":3
+         },
+         {
+            "id":131837,
+            "space_id":131837,
+            "name":"Employee Network",
+            "url":"https://copenhagenjs.podio.com/employeenetwork/",
+            "url_label":"employeenetwork",
+            "org_id":44315,
+            "contact_count":null,
+            "member_count":null,
+            "app_count":null,
+            "role":"admin",
+            "rights":[
+               "view_members",
+               "add_task",
+               "add_widget",
+               "subscribe",
+               "update",
+               "add_file",
+               "add_hook",
+               "add_status",
+               "add_user",
+               "add_contact",
+               "view"
+            ],
+            "post_on_new_app":null,
+            "post_on_new_member":null,
+            "subscribed":null,
+            "privacy":null,
+            "auto_join":null,
+            "type":"emp_network",
+            "premium":false,
+            "last_activity_on":null,
+            "created_on":null,
+            "is_overdue":null,
+            "push":{
+               "timestamp":1366358596,
+               "expires_in":19926,
+               "channel":"/space/131837",
+               "signature":"62e55f02ed5ed3ad393b32d1dcfb5f5197faaa80"
+            },
+            "rank":2
+         }
+      ],
+      "url":"https://copenhagenjs.podio.com/",
+      "url_label":"copenhagenjs",
+      "premium":true,
+      "role":"admin",
+      "status":"active",
+      "sales_agent_id":16456,
+      "created_on":null,
+      "user_limit":10,
+      "member_count":null,
+      "contact_count":null,
+      "billing_interval":null,
+      "rights":[
+         "add_conversation",
+         "add_widget",
+         "update",
+         "add_contract",
+         "view_admins",
+         "statistics",
+         "add_space",
+         "view"
+      ],
+      "verified_domain":null,
+      "domains":[
+
+      ],
+      "rank":4,
+      "contract_status":"full",
+      "type":"sponsored",
+      "segment":null,
+      "segment_size":null,
+      "grants_count":0,
+      "allow_add_space":null,
+      "child_orgs":[
+
+      ],
+      "active?":true,
+      "admin?":true,
+      "upgradable?":true,
+      "not_upgraded?":false,
+      "partially_upgraded?":false,
+      "employee?":true,
+      "premium?":true,
+      "first_domain":null
+   }
+];
+			var key=(e.keycode||e.which);
+			console.log('keycode    '+key);
+			console.log(json.length);
+			if(key==40)
+			{
+				// $('#list_div').on('focus', 'li', function() {
+				// 	    $this = $(this);
+				// 	    $this.addClass('active').siblings().removeClass();
+				// 	    $this.closest('#list_div').scrollTop($this.index() * $this.outerHeight());
+				// 	}).on('keydown', 'li', function(e) {
+				// 	    $this = $(this);
+				// 	    if (e.keyCode == 40) {        
+				// 	        $this.next().focus();
+				// 	        return false;
+				// 	    } else if (e.keyCode == 38) {        
+				// 	        $this.prev().focus();
+				// 	        return false;
+				// 	    }
+				// 	}).find('li').first().focus();
+				console.log(id+'   '+present);
+				$('.'+((present)%(id+1))).removeClass('active');
+				if(present==id)
+				{
+					present=0;
+					console.log('present');
+				}
+				$('.'+((++present)%(id+1))).addClass('active');
+			}
+			else if(key==38)
+			{
+				if(present==0)
+				{
+					$('.'+((++present)%(id+1))).addClass('active');
+				}
+				else
+				{
+					$('.'+((present)%(id+1))).removeClass('active');
+					if(present==1)
+					{
+						present=id+1;
+						console.log('present');
+					}
+					$('.'+((--present)%(id+1))).addClass('active');
+				}
+			}
+			else if(key==13)
+			{
+				console.log($('.'+present+' a').attr('href'));
+				window.location.href=$('.'+present+' a').attr('href');
+
+				// $('.'+present).click(function(){
+				// 	console.log($('a', this).attr('href'));
+				//     window.loaction.href=$('a', this).attr('href');
+				//    // return false;
+				// });
+			}
+			else
+			{
+			id=0;
+			present=0;
+			//up=0;
+			$(".list").empty();
+			var first=0;
+			for(i=0;i<json.length;i++)
+			{
+				console.log(i+'    '+json[i].name);
+				var t=0;
+				var data=json[i].name.toLowerCase();
+				var sub=document.getElementById('search').value.toLowerCase();
+				var index=data.indexOf(sub);
+				if(index>=0)
+				{
+					t=1;
+					var initial=json[i].name.substring(0,index),sub=json[i].name.substring(index,index+sub.length),end=json[i].name.substring(index+sub.length);
+					var url=json[i].url;
+					if(first==0)
+					{
+						$("#search_area ul").append('<li id="org" class="first '+(++id)+'"><a href="'+url+'">'+initial+'<span class="tab">'+sub+'</span>'+end+'</a></li>');
+						first=1;
+					}
+					else
+						$("#search_area ul").append('<li id="org" class="'+(++id)+'"><a href="'+url+'">'+initial+'<span class="tab">'+sub+'</span>'+end+'</a></li>');
+				}
+				//$("#drop_down ul").append('<li>'+json[i].name+'</li>');
+				for(j=0;j<json[i].spaces.length;j++)
+					{
+						console.log(json[i].spaces[j].name);
+						var data=json[i].spaces[j].name.toLowerCase();
+						var sub=document.getElementById('search').value.toLowerCase();
+						var index=data.indexOf(sub);
+						var url=json[i].spaces[j].url;
+						if(index>=0)
+						{
+							if(t==0)
+							{
+								t=1;
+								var url=json[i].url;
+								if(first==0)
+								{
+									first=1;
+									$("#search_area ul").append('<li id="org" class="first '+(++id)+'"><a href="'+url+'">'+json[i].name+'</a></li>');
+								}
+								else
+									$("#search_area ul").append('<li id="org" class="'+(++id)+'"><a href="'+url+'">'+json[i].name+'</a></li>');
+							}
+							var initial=json[i].spaces[j].name.substring(0,index),sub=json[i].spaces[j].name.substring(index,index+sub.length),end=json[i].spaces[j].name.substring(index+sub.length);
+							console.log(initial+'  |  '+sub+'  | '+end);
+							var url=json[i].spaces[j].url;
+						$("#search_area ul").append('<li id="space" class="'+(++id)+'"><a href="'+url+'">'+initial+'<span class="tab">'+sub+'</span>'+end+'</a></li>');
+						}
+					}
+			}
+		}
+
+		$('.'+present).click(function(){
+					console.log($('a', this).attr('href'));
+				    window.location.href = $('a', this).attr('href');
+				   // return false;
+				});
+
+		}
+
+		// $('#list_div').on('focus', 'li', function() {
+		// 	    $this = $(this);
+		// 	    $this.addClass('active').siblings().removeClass();
+		// 	    $this.closest('#list_div').scrollTop($this.index() * $this.outerHeight());
+		// 	}).on('keydown', 'li', function(e) {
+		// 	    $this = $(this);
+		// 	    if (e.keyCode == 40) {        
+		// 	        $this.next().focus();
+		// 	        return false;
+		// 	    } else if (e.keyCode == 38) {        
+		// 	        $this.prev().focus();
+		// 	        return false;
+		// 	    }
+		// 	}).find('li').first().focus();
+	</script>
+	<style>
+	html,body{
+		min-height:100%;
+		min-width:100%;
+		padding: 0;
+		margin:0;
+		position: fixed;
+	}
+	
+		.tab{
+			background-color: yellow;
+		}
+		
+		#search_area
+		{
+			margin: 10%;
+			align-content: center;
+			height:400px;
+			max-height: 400px;
+		}
+
+		.first{
+			background-color: #addfff;
+		}
+	    input[type=text] 
+	    {
+	    	width: 100%;
+		    box-sizing: border-box;
+		    border: 2px solid #ccc;
+		    border-radius: 4px;
+		    font-size: 16px;
+		    background-color: white;
+		    background-image:url("http://www.pvhc.net/img3/ghfdkufafgdukrsgjvwc.png");
+		    /*background-position: 10px 10px; 
+		    */background-size: 5px 5px 5px 5px;
+		    background-repeat: no-repeat;
+		    padding: 12px 20px 12px 40px;
+		    -webkit-transition: width 0.4s ease-in-out;
+		    transition: width 0.4s ease-in-out;
+		}
+		#list_div{
+			height: 350px;
+			overflow: auto;
+		}
+		ul{
+			list-style: none;
+			overflow:auto
+			max-height:350px;
+			margin:0;
+			padding: 0;
+		}
+		#org{
+			
+			color:#0000ff;
+			text-decoration-style: solid; 
+			font-weight: bold;
+			font-size: 120%;
+		}
+		#space{
+			
+			color: #000000;
+			font-size: 100%;
+			padding-left:5%;
+		}
+		li{
+			border-color: #736f6E;
+			border-style: solid;
+			border-width:0px 1px 1px 1px;
+			height:10%;
+			text-decoration: none;
+			padding:3%;
+			
+		}
+		li:hover{
+			background-color: #82CAFA;	
+		}
+		li a{
+			text-decoration: none;
+			margin:0;
+			padding: 0;
+			display: inline-block;
+			height:100%;
+			width:100%;
+		}
+		.active{
+		background-color: #0000ff;
+	}
+	</style>
+	<div id="search_area">
+		<input type="text" id="search" name="search" placeholder="Search..." onkeyup="handle(event)" />
+		<div id="list_div">
+		<ul class="list">    
+    	</ul>
+    	</div>
+	</div>
+
+	
+	<!-- <script type="text/babel">
+		const input=<input type="text" id="search" name="search" onkeypress="handle(event)" />;
+
+		
+
+		ReactDOM.render(
+						input,
+						document.getElementById('search_area')
+						);
+	</script> -->
+</body>
+</html>
